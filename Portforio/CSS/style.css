@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+  
+body{
+    font-family: Helvetica;
+    line-height: 1.7;
+    color: #333;
+}
+
+ /* HEDER
+ ------------------------------- */
+
+ .wrapper {
+    max-width: 1100px;
+    margin: 100px auto 20px;
+    padding: 0 4%;
+}
+
+ .page-header {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.logo {
+    width: 110px;
+    margin-top: 20px;
+}
+.main-nav {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+    margin-top: 150px;
+}
+.main-nav li {
+    margin-left: 45px;
+}
+.main-nav a {
+    color: #333;
+}
+.main-nav a:hover {
+    color: #0bd;
+}
+.main-nav a {
+    font-family: "Lato", system-ui;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+}
+
+/*mainVisual---------------------*/
+
+.mainvisual {
+    background-image: url(../images/main.png);
+    background-size: cover; /* 画像を要素のサイズに合わせて拡大・縮小 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; 
+}
+
+.main-bt {
+    margin-left: 250px;
+}
+
+
+ /* TOP-Works
+ ------------------------------- */
+
+.ttl {
+    font-family: "Lato", system-ui;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    margin: 100px auto;
+}
+
+#works {
+    margin-top:100px;
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px; 
+    justify-content: flex-start;
+    margin-top:60px;
+}
+    
+.items {
+    flex: 0 0 30%; 
+    border: solid 1px;
+    border-color: #3333;
+  }
+  
+  
+.items img {
+    width: 350px;
+    height: 350px; 
+
+  }
+
+  .items:hover{ 
+	opacity:0.5;
+	transition:0.3s;
+}
+
+  /* 画面サイズが小さい場合のためにレスポンシブデザインを追加 */
+  @media (max-width: 768px) {
+    .items {
+      flex: 0 0 45%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .items {
+      flex: 0 0 100%;
+    }
+  }
+  
+   /* HOME-Services
+ ------------------------------- */
+
+ #services {
+    text-align: center;
+    margin-top:100px;
+ }
+
+p.text00{
+    text-align: center;
+    display:block;
+    margin: 0 auto;
+ }
+
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin:60px auto ;
+}
+
+h3.ttl {
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    margin-bottom: 1px;
+    letter-spacing:0;
+    line-height: 1;
+    
+}
+p.ttl {
+    font-family: "Lato";
+    font-size: 16px;
+    margin: 0 0 20px;
+}
+p.text01{
+    font-size: 16px;
+    display: block;
+    max-width:275px;
+}
+
+p.text02{
+    font-family: "Lato"; 
+}
+
+/* About
+------------------------------- */
+
+.about wrapper{
+    text-align: center;
+}
+
+h4.name {
+    margin: 100px 0 0 120px ;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.myicon {
+    height: 260px;
+}
+
+dl {
+    margin-top:10px;
+    line-height:160%;
+}
+dt{
+    float: left;
+    text-align:left;
+  }
+
+  dt::after{
+    content: "："
+  }
+
+  
+#about {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin:30px auto ;
+}
+/* Works
+------------------------------- */
+.works-nav {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.works-nav li {
+    padding: 0 50px;
+    border-right: 1px solid #333;
+}
+
+.works-nav a {
+    font-family: "Lato", system-ui;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+}
+.works-nav a:hover {
+    color: #0bd;
+}
+
+.works-items {
+    text-align: center;
+}
+
+.works-items:hover{ 
+	opacity:0.5;
+	transition:0.3s;
+}
+
+
+.text03{
+    text-align: left;
+    padding: 20px 0 50px 130px;
+}
+
+
+
+
+/* CONTACT
+------------------------------- */
+#contact {
+    text-align: center;
+}
+
+form  {
+    margin:0 200px 100px;
+}
+label {
+    font-size: 16px;
+    margin:15px 0 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255,255,255,.5);
+    border: 1px #333 solid;
+    padding: 10px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+}
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 10rem;
+}
+input[type="submit"] {
+    display: inline-block;
+    background-color: #EAE7E3;   
+    cursor: pointer;
+    line-height: 1;
+    border : 2px solid #EAE7E3; 
+    padding:10px 50px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    color : #ffff; 
+    background : #333; 
+  }
+
+.lastpart{
+    width: 100vw;
+    background-image: url(../images/last.png);
+    background-size: cover; /* 画像を要素のサイズに合わせて拡大・縮小 */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat;
+    height:460px;
+}
+
+p.text04{
+    margin-top: 100px;
+    padding:100px 0 0 60px;
+}
+
+
+
+
+/* フッター
+------------------------------- */
+footer {
+    background: #EAE7E3;
+    height:400px;
+}
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    width:800px;
+    margin:30px auto ;
+}
+.pl-icon{
+    height: 200px;
+}
+
+.name{
+    font-size:16px;
+    margin:50px 0 0;
+    text-align: left;
+}
+
+p.text {
+    font-size: 14px;
+    text-align: left;
+    display:block;
+    width: 620px;
+    margin-top:10px;
+}
+footer p {
+    margin-bottom:30px;
+    color: #333;
+    font-family: "Lato";
+    font-size: 0.875rem;
+    text-align: right;
+}
